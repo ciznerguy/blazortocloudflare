@@ -4,26 +4,33 @@
 
 <h1>Hello, Guy! Hello, world!</h1>
 
-<!-- Rectangle with a dynamic style -->
-<div style="width: 200px; height: 200px; background-color: @rectangleColor;"></div>
+<!-- Three rectangles next to each other -->
+<div style="width: 150px; height: 180px; background-color: @rectangleColor1; float: left;"></div>
+<div style="width: 150px; height:180px; background-color: @rectangleColor2; float: left;"></div>
+<div style="width: 150px; height: 180px; background-color: @rectangleColor3; float: left;"></div>
 
-<!-- Two buttons to change the color -->
-<button @onclick="ChangeToRed">Change to Red</button>
-<button @onclick="ChangeToYellow">Change to Yellow</button>
+<!-- Button to change the colors -->
+<button @onclick="FrenchFlag">French Flag</button>
+<button @onclick="ItalianFlag">Italian Flag</button>
 
 @code {
-    // Initialize the rectangle color as white dddd
-    private string rectangleColor = "blue";
+    // Initialize the rectangle colors
+    private string rectangleColor1 = "blue";
+    private string rectangleColor2 = "blue";
+    private string rectangleColor3 = "blue";
 
-    // Event handler for changing to red
-    private void ChangeToRed()
+    // Event handler for changing the colors
+    private void FrenchFlag()
     {
-        rectangleColor = "red";
+        rectangleColor1 = "blue";
+        rectangleColor2 = "white";
+        rectangleColor3 = "red";
     }
 
-    // Event handler for changing to yellow
-    private void ChangeToYellow()
+    private void ItalianFlag()
     {
-        rectangleColor = "yellow";
+        rectangleColor1 = "green";
+        rectangleColor2 = "white";
+        rectangleColor3 = "red";
     }
 }
