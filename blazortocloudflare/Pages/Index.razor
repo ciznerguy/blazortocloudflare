@@ -2,12 +2,28 @@
 
 <PageTitle>Index</PageTitle>
 
-<<<<<<< HEAD
-<h1>Hello, Guy!</h1>
-=======
-<h1>Hello, world!</h1>
->>>>>>> 12f09a12e8e5735e6f792c97f99f88a7016ee91c
+<h1>Hello, Guy! Hello, world!</h1>
 
-Welcome to your new app.
+<!-- Rectangle with a dynamic style -->
+<div style="width: 200px; height: 200px; background-color: @rectangleColor;"></div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<!-- Two buttons to change the color -->
+<button @onclick="ChangeToRed">Change to Red</button>
+<button @onclick="ChangeToYellow">Change to Yellow</button>
+
+@code {
+    // Initialize the rectangle color as white
+    private string rectangleColor = "blue";
+
+    // Event handler for changing to red
+    private void ChangeToRed()
+    {
+        rectangleColor = "red";
+    }
+
+    // Event handler for changing to yellow
+    private void ChangeToYellow()
+    {
+        rectangleColor = "yellow";
+    }
+}
